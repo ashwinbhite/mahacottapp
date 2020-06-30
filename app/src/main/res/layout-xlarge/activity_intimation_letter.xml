@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/icon_background"
+    tools:context=".IntimationLetterActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Intimation Letter"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="1dp"/>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutInScroll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@+id/title">
+
+        <TextView
+            android:id="@+id/txtVariety"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/selectVariety"
+            android:layout_alignTop="@+id/selectVariety"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="Variety"
+            android:textSize="16sp" />
+
+        <Spinner
+            android:id="@+id/selectVariety"
+            android:layout_width="170dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/txtVariety" />
+
+        <TextView
+            android:id="@+id/txtGrade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/selectGrade"
+            android:layout_below="@+id/selectVariety"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="Grade"
+            android:textSize="16sp" />
+
+        <Spinner
+            android:id="@+id/selectGrade"
+            android:layout_width="170dp"
+            android:layout_height="50dp"
+            android:layout_alignLeft="@+id/selectVariety"
+            android:layout_below="@+id/selectVariety"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/txtGrade" />
+    </RelativeLayout>
+
+    <Button
+        android:layout_below="@+id/relativeLayoutInScroll"
+        android:id="@+id/btnNext"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:background="@drawable/roundcorner_button"
+        android:text="Next"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="16sp" />
+
+</RelativeLayout>

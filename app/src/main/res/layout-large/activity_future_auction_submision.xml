@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/icon_background"
+    tools:context=".FutureAuctionSubmision">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Future Seed Stock Entry"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="1dp"/>
+
+    <RelativeLayout
+        android:layout_below="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="1dp" >
+
+        <ScrollView
+            android:id="@+id/scrollViewContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutInScroll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp" >
+
+                <TextView
+                    android:id="@+id/lblcommodity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="5dp"
+                    android:text="Commodity "
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txtViewCommodity"
+                    android:layout_width="170dp"
+                    android:layout_height="35dp"
+                    android:layout_alignBaseline="@+id/lblcommodity"
+                    android:layout_alignLeft="@+id/selectSaleType"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@+id/lblcommodity"
+                    android:background="@drawable/spinner_border"
+                    android:textSize="16sp"
+                    android:padding="5dp"
+                    android:text="COTTON SEEDS"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/txtstockEntryDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/inputDate"
+                    android:layout_below="@+id/lblcommodity"
+                    android:paddingLeft="5dp"
+                    android:text="Stock Date"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/inputDate"
+                    android:layout_width="170dp"
+                    android:layout_height="35dp"
+                    android:layout_alignLeft="@+id/selectSaleType"
+                    android:layout_below="@+id/lblcommodity"
+                    android:textSize="16sp"
+                    android:layout_marginTop="13dp"
+                    android:layout_toRightOf="@+id/txtstockEntryDate"
+                    android:background="@drawable/spinner_border"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/txtSaleType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/selectSaleType"
+
+                    android:layout_alignTop="@+id/selectSaleType"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="Sale Type"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/selectSaleType"
+                    android:layout_width="170dp"
+                    android:layout_height="50dp"
+                    android:layout_alignLeft="@+id/selectSaleType"
+                    android:layout_below="@+id/inputDate"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+
+                    android:layout_toRightOf="@+id/txtSaleType"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/selectSaleType"
+                    android:layout_toRightOf="@drawable/arrow" />
+
+                <TextView
+                    android:id="@+id/txtheapno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/edtheapno"
+                    android:layout_below="@+id/txtSaleType"
+                    android:paddingLeft="5dp"
+                    android:text="Heap No"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/edtheapno"
+                    android:layout_width="170dp"
+                    android:layout_height="35dp"
+                    android:layout_alignLeft="@+id/selectSaleType"
+                    android:layout_below="@+id/selectSaleType"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/txtheapno"
+                    android:background="@drawable/spinner_border"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-"
+                    android:hint="Heap No"
+                    android:padding="3dp" />
+
+                <TextView
+                    android:id="@+id/txtVariety"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/autoTxtVariety"
+                    android:layout_alignBottom="@+id/autoTxtVariety"
+
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="Variety"
+                    android:textSize="16sp" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoTxtVariety"
+                    android:layout_width="170dp"
+                    android:layout_height="35dp"
+                    android:layout_alignLeft="@+id/selectSaleType"
+                    android:layout_below="@+id/edtheapno"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/txtVariety"
+                    android:background="@drawable/spinner_border"
+                    android:hint="Commodity Variety"
+                    android:padding="3dp"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txtGrade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/auutoGrade"
+
+                    android:layout_alignTop="@+id/selectSaleType"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="Grade"
+                    android:textSize="16sp" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/auutoGrade"
+                    android:layout_width="170dp"
+                    android:layout_height="35dp"
+                    android:layout_alignLeft="@+id/selectSaleType"
+                    android:layout_below="@+id/autoTxtVariety"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/txtGrade"
+                    android:background="@drawable/spinner_border"
+                    android:hint="Commodity Grade"
+                    android:padding="3dp"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txtactQty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/edtQuantity"
+                    android:paddingLeft="5dp"
+                    android:text="Auction QTY"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/edtQuantity"
+                    android:layout_width="170dp"
+                    android:layout_height="35dp"
+                    android:layout_alignLeft="@+id/selectSaleType"
+                    android:layout_below="@+id/auutoGrade"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/txtactQty"
+                    android:background="@drawable/spinner_border"
+                    android:hint="Quantity In Qtl"
+                    android:inputType="number"
+                    android:padding="5dp" />
+
+                <TextView
+                    android:id="@+id/txtoilprcnt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/edtoilPercnt"
+                    android:paddingLeft="5dp"
+                    android:text="Oil Percent"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/edtoilPercnt"
+                    android:layout_width="170dp"
+                    android:layout_height="35dp"
+                    android:layout_alignLeft="@+id/selectSaleType"
+                    android:layout_below="@+id/edtQuantity"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/txtoilprcnt"
+                    android:background="@drawable/spinner_border"
+                    android:hint="Oil Percent"
+                    android:inputType="numberDecimal"
+                    android:padding="5dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/txtmostrpercent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/edtmostrpercnt"
+                    android:paddingLeft="5dp"
+                    android:text="Moisture"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/edtmostrpercnt"
+                    android:layout_width="170dp"
+                    android:layout_height="35dp"
+                    android:layout_alignLeft="@+id/selectSaleType"
+                    android:layout_below="@+id/edtoilPercnt"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/txtmostrpercent"
+                    android:background="@drawable/spinner_border"
+                    android:hint="moisture"
+                    android:inputType="numberDecimal"
+                    android:padding="5dp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/edtmostrpercnt"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/roundcorner_button"
+                    android:text="Save"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <!--
+                <LinearLayout
+				    android:id="@+id/btnLL"
+				    android:paddingTop="20dp"
+				    android:layout_marginTop="50dp"
+				    android:layout_marginBottom="10dp"
+				    android:layout_below="@+id/edtoilPercnt"
+				    android:layout_height="wrap_content"
+				    android:layout_width="wrap_content"
+				    android:gravity="center_horizontal"
+				    android:layout_centerHorizontal="true"
+				    android:orientation="horizontal">
+
+					<Button
+			          android:id="@+id/btnClear1"
+			          android:layout_width="70dp"
+			          android:layout_height="40dp"
+			          android:text="Clear"
+			          android:layout_marginLeft="20dp"
+			          android:textSize="18sp"
+			          android:textStyle="bold"
+			          android:background="@drawable/roundcorner_button"
+			          android:textAppearance="?android:attr/textAppearanceMedium"
+			          />
+
+					<Button
+			          android:id="@+id/btnSubmit"
+			          android:layout_width="120dp"
+			          android:layout_height="40dp"
+			          android:text="Submit"
+			          android:layout_marginLeft="20dp"
+			          android:textSize="18sp"
+			          android:textStyle="bold"
+			          android:background="@drawable/roundcorner_button"
+			          android:textAppearance="?android:attr/textAppearanceMedium"
+			          />
+
+				</LinearLayout>
+                -->
+
+                <HorizontalScrollView
+                    android:id="@+id/hsv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/btnSubmit"
+                    android:layout_marginTop="5dp"
+                    android:fillViewport="true"
+                    android:minWidth="200dp"
+                    android:scrollbars="none" >
+
+                    <TableLayout
+                        android:id="@+id/tableStockReport"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:stretchColumns="*" >
+                    </TableLayout>
+                </HorizontalScrollView>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/icon_background"
+    tools:context=".HomeActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="left">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="Welcome,"
+            android:textColor="#000000"
+            android:layout_marginTop="10dp"
+            android:layout_alignBaseline="@+id/txtUsername"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/txtUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:layout_toRightOf="@+id/name"
+            android:text="user"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/centername"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/name"
+            android:textSize="14sp"
+            android:text="Center Name"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="5dp"
+            />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/relativeLayout1" >
+
+        <!--
+        <RelativeLayout
+            android:id="@+id/relTemp"
+            android:layout_width="fill_parent"
+            android:layout_height="35dp">
+
+        </RelativeLayout>
+        -->
+
+        <RelativeLayout
+            android:id="@+id/relOptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/tvGradedAuction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/btnSeedStockEntry"
+                android:layout_alignRight="@+id/btnSeedStockEntry"
+                android:layout_below="@+id/btnSeedStockEntry"
+                android:gravity="center"
+                android:text="Processed Seed Stock"
+                android:textColor="#000000"
+                />
+
+            <Button
+                android:id="@+id/btnDeliveryDetailsEntry"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/delivery_details_entry"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/tvNonGradedAuction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/btnDeliveryDetailsEntry"
+                android:layout_alignRight="@+id/btnDeliveryDetailsEntry"
+                android:layout_below="@+id/btnDeliveryDetailsEntry"
+                android:gravity="center"
+                android:text="Delivery Details Entry"
+                android:textColor="#000000"
+                />
+
+            <Button
+                android:id="@+id/btnDeliveryOrderVerify"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignTop="@+id/btnDeliveryDetailsEntry"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/btnDeliveryDetailsEntry"
+                android:background="@drawable/delivery_order_verification"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tvWinnerReport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/btnDeliveryOrderVerify"
+                android:layout_alignRight="@+id/btnDeliveryOrderVerify"
+                android:layout_below="@+id/btnDeliveryOrderVerify"
+                android:gravity="center"
+                android:text="D.O. Verification"
+                android:textColor="#000000"
+                />
+
+            <!--  <Button
+                 android:id="@+id/btnLateLiftingReciept"
+                 android:layout_width="80dp"
+                 android:layout_height="80dp"
+                 android:layout_alignLeft="@+id/btnSeedStockEntry"
+                 android:layout_below="@+id/btnSeedStockEntry"
+                 android:background="@drawable/openingbalanceentry"
+                 android:layout_marginTop="70dp"/> -->
+
+            <!--  <TextView
+                 android:id="@+id/tvbtnLateLiftingReciept"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignLeft="@+id/btnLateLiftingReciept"
+                 android:layout_alignRight="@+id/btnLateLiftingReciept"
+                 android:layout_below="@+id/btnLateLiftingReciept"
+                 android:gravity="center"
+                 android:text="Opening Balance "
+                 android:textColor="#000000"
+                />
+  -->
+            <Button
+                android:id="@+id/btnIntimationLetter"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignLeft="@+id/btnDeliveryDetailsEntry"
+                android:layout_alignTop="@+id/btnFutureAuctionSubmision"
+                android:background="@drawable/intimation_letter"
+                android:layout_below="@+id/btnDeliveryDetailsEntry"/>
+
+            <TextView
+                android:id="@+id/tvArrival"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/btnIntimationLetter"
+                android:layout_alignRight="@+id/btnIntimationLetter"
+                android:layout_below="@+id/btnIntimationLetter"
+                android:gravity="center"
+                android:text="Intimation Letter"
+                android:textColor="#000000"
+                />
+
+            <Button
+                android:id="@+id/btnSeedStockEntry"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_above="@+id/tvNonGradedAuction"
+                android:background="@drawable/processedseedstockentry"
+                android:layout_marginRight="27dp"
+                android:layout_toLeftOf="@+id/btnDeliveryDetailsEntry" />
+
+
+            <Button
+                android:id="@+id/btnProcurement"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignTop="@+id/btnIntimationLetter"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/btnIntimationLetter"
+                android:background="@drawable/rawcottonprocuremententry"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tvprocurement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnProcurement"
+                android:layout_alignLeft="@+id/btnProcurement"
+                android:gravity="center"
+                android:text="Proc Entry"
+                android:textColor="#000000" />
+
+            <!--    <Button
+                 android:id="@+id/btnFutureAuctionSubmision"
+                 android:layout_width="80dp"
+                 android:layout_height="80dp"
+                 android:layout_alignLeft="@+id/btnSeedStockEntry"
+                 android:layout_below="@+id/btnLateLiftingReciept"
+                 android:background="@drawable/futureauctionseedentry"
+                 android:layout_marginTop="70dp"/>
+                -->
+
+
+            <Button
+                android:id="@+id/btnFutureAuctionSubmision"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignLeft="@+id/btnSeedStockEntry"
+                android:layout_below="@+id/btnSeedStockEntry"
+                android:background="@drawable/futureauctionseedentry"
+                android:layout_marginTop="70dp"/>
+
+            <TextView
+                android:id="@+id/tvbtnFutureAuctionSubmision"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/btnFutureAuctionSubmision"
+                android:layout_alignRight="@+id/btnFutureAuctionSubmision"
+                android:layout_below="@+id/btnFutureAuctionSubmision"
+                android:gravity="center"
+                android:text="Future Auction Sub"
+                android:textColor="#000000"
+                />
+
+
+             <!--<Button
+                 android:id="@+id/btnLateLiftingReciept"
+                 android:layout_width="80dp"
+                 android:layout_height="80dp"
+                 android:layout_alignLeft="@+id/btnProcurement"
+                 android:layout_below="@+id/btnProcurement"
+                 android:background="@drawable/openingbalanceentry"
+                 android:layout_marginTop="70dp"/>
+
+              <TextView
+                 android:id="@+id/tvbtnLateLiftingReciept"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignLeft="@+id/btnLateLiftingReciept"
+                 android:layout_alignRight="@+id/btnLateLiftingReciept"
+                 android:layout_below="@+id/btnLateLiftingReciept"
+                 android:gravity="center"
+                 android:text="Opening Balance "
+                 android:textColor="#000000"
+                />-->
+
+
+
+            <Button
+                android:id="@+id/btnStockStatus"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+
+                android:layout_alignLeft="@+id/btnFutureAuctionSubmision"
+                android:layout_below="@+id/btnFutureAuctionSubmision"
+                android:background="@drawable/seedstocstatus"
+                android:layout_marginTop="70dp"/> -->
+
+            <TextView
+                android:id="@+id/tvbtnbtnStockStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/btnStockStatus"
+                android:layout_alignRight="@+id/btnStockStatus"
+                android:layout_below="@+id/btnStockStatus"
+                android:gravity="center"
+                android:text="Seed Stock Status "
+                android:textColor="#000000"
+                />
+
+            <Button
+                android:id="@+id/btnReports"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignLeft="@+id/btnIntimationLetter"
+                android:layout_below="@+id/btnIntimationLetter"
+                android:background="@drawable/report"
+                android:layout_marginTop="70dp"/>
+
+            <TextView
+                android:id="@+id/tvbtnbtnReports"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/btnReports"
+                android:layout_alignRight="@+id/btnReports"
+                android:layout_below="@+id/btnReports"
+                android:gravity="center"
+                android:text="View Reports "
+                android:textColor="#000000"
+                />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnlogout"
+        android:layout_width="30dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/logout_new"
+        android:gravity="right" />
+
+</RelativeLayout>

@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/icon_background"
+    tools:context=".DeliveryLoryActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutInScroll"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" >
+
+            <TextView
+                android:id="@+id/txtGatePassNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/edttxtGatePassNumber"
+                android:paddingLeft="5dp"
+                android:text="Gate Pass No"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edttxtGatePassNumber"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/txtGatePassNumber"
+                android:background="@drawable/spinner_border"
+                android:hint="gate pass Number"
+                android:inputType="number"
+                android:padding="5dp"
+                android:textColor="#000000"
+                android:textSize="16sp" >
+
+                <requestFocus />
+            </EditText>
+
+            <TextView
+                android:id="@+id/txtAllotmentNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/edtAllotmentNumber"
+                android:layout_alignParentLeft="true"
+                android:paddingLeft="5dp"
+                android:text="Allotment No"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edtAllotmentNumber"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/edttxtGatePassNumber"
+                android:layout_below="@+id/edttxtGatePassNumber"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/txtAllotmentNumber"
+                android:background="@drawable/spinner_border"
+                android:editable="false"
+                android:hint="allotment number"
+                android:padding="5dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtDeliveryDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/btnDeliveryDate"
+                android:layout_alignParentLeft="true"
+                android:paddingLeft="5dp"
+                android:text="Delivery Date"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnDeliveryDate"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_alignLeft="@+id/edttxtGatePassNumber"
+                android:layout_below="@+id/edtAllotmentNumber"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/txtDeliveryDate"
+                android:background="@drawable/spinner_border" />
+
+            <TextView
+                android:id="@+id/txtLorryNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/edtTxtLorryNo"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/txtDeliveryDate"
+                android:paddingLeft="5dp"
+                android:text="Lorry No"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edtTxtLorryNo"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/edttxtGatePassNumber"
+                android:layout_below="@+id/btnDeliveryDate"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/txtLorryNo"
+                android:background="@drawable/spinner_border"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
+                android:hint="MH01CD1111"
+                android:inputType="textCapCharacters"
+                android:maxLength="10"
+                android:padding="5dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtLotNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/edtTxtLotNo"
+                android:layout_alignParentLeft="true"
+                android:paddingLeft="5dp"
+                android:text="Lot No"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edtTxtLotNo"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/edttxtGatePassNumber"
+                android:layout_below="@+id/edtTxtLorryNo"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/txtLotNo"
+                android:background="@drawable/spinner_border"
+                android:hint="lot number"
+                android:padding="5dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtQtyApproved"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/edtTxtLotNo"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/edtTxtLotNo"
+                android:textColor="#6175f5"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+                android:id="@+id/LLWeightDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtTxtLotNo"
+                android:layout_margin="20dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/spinner_border"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/txtNoOfBales"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/edtNoOfBales"
+                    android:layout_alignParentLeft="true"
+                    android:paddingLeft="5dp"
+                    android:text="No.Of Bales"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/edtNoOfBales"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/edtGrossWeight"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/txtNoOfBales"
+                    android:hint="0.00"
+                    android:inputType="number"
+                    android:paddingLeft="5dp" />
+
+                <TextView
+                    android:id="@+id/txtLotwiseRemainingQty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/edtNoOfBales"
+                    android:layout_alignBaseline="@+id/edtNoOfBales"
+                    android:padding="5dp"
+                    android:textColor="#6175f5"
+                    android:textSize="18sp"
+                    />
+
+                <TextView
+                    android:id="@+id/txtGrossWeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/edtGrossWeight"
+                    android:layout_alignParentLeft="true"
+                    android:paddingLeft="5dp"
+                    android:text="Gross Weight"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/edtGrossWeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtNoOfBales"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/txtGrossWeight"
+                    android:hint="0.00"
+                    android:inputType="numberDecimal"
+                    android:paddingLeft="5dp" />
+
+                <TextView
+                    android:id="@+id/txtTareWeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/edtTareWeight"
+                    android:layout_alignParentLeft="true"
+                    android:paddingLeft="5dp"
+                    android:text="Tare Weight"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/edtTareWeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/edtGrossWeight"
+                    android:layout_below="@+id/edtGrossWeight"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/txtTareWeight"
+                    android:hint="0.00"
+                    android:inputType="numberDecimal"
+                    android:paddingLeft="5dp" />
+
+                <TextView
+                    android:id="@+id/txtNetWeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/edtNetWeight"
+                    android:layout_alignParentLeft="true"
+                    android:paddingLeft="5dp"
+                    android:text="Net Weight"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/edtNetWeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/edtGrossWeight"
+                    android:layout_below="@+id/edtTareWeight"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/txtNetWeight"
+                    android:editable="false"
+                    android:hint="0.00"
+                    android:inputType="numberDecimal"
+                    android:paddingLeft="5dp" />
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/LLWeightDetails"
+                android:layout_margin="10dp"
+                android:layout_marginTop="10dp" >
+
+                <RelativeLayout
+                    android:id="@+id/LL_lateLift"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/spinner_border"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:id="@+id/lblLateLift"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="LateLifting Details"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/txtLateLiftlabel"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/lblLateLift"
+                        android:layout_marginLeft="5dp"
+                        android:padding="5dp"
+                        android:text="Charge"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txtcgstLabel"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/lblLateLift"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/txtLateLiftlabel"
+                        android:padding="5dp"
+                        android:text="Cgst"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txtsgstLabel"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/lblLateLift"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/txtcgstLabel"
+                        android:padding="5dp"
+                        android:text="Sgst"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txtigstLabel"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/lblLateLift"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/txtsgstLabel"
+                        android:padding="5dp"
+                        android:text="Igst"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txttotalLabel"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/lblLateLift"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/txtigstLabel"
+                        android:padding="5dp"
+                        android:text="Total"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txtLateLift"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/txtLateLiftlabel"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/spinner_border"
+                        android:hint="0.0"
+                        android:padding="5dp"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/txtcgst"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/txtLateLiftlabel"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/txtLateLift"
+                        android:background="@drawable/spinner_border"
+                        android:hint="0.0"
+                        android:padding="5dp"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/txtsgst"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/txtLateLiftlabel"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/txtcgst"
+                        android:background="@drawable/spinner_border"
+                        android:hint="0.0"
+                        android:padding="5dp"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/txtigst"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/txtLateLiftlabel"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/txtsgst"
+                        android:background="@drawable/spinner_border"
+                        android:hint="0.0"
+                        android:padding="5dp"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/txttotal"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/txtLateLiftlabel"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/txtigst"
+                        android:background="@drawable/spinner_border"
+                        android:hint="0.0"
+                        android:padding="5dp"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+            </HorizontalScrollView>
+
+
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/horizontalScrollView"
+                android:layout_margin="10dp"
+                android:layout_marginTop="10dp" >
+
+                <RelativeLayout
+                    android:id="@+id/LL_ShortCerti"
+                    android:layout_width="436dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/spinner_border"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:id="@+id/lblShortCerti"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="Short Certificate"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/txtShortWtlabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/lblShortCerti"
+                        android:layout_marginLeft="5dp"
+                        android:padding="5dp"
+                        android:text="ShortWeight"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/txtShortWt"
+                        android:layout_width="90dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/txtShortWtlabel"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/spinner_border"
+                        android:hint="0.0"
+                        android:padding="5dp"
+                        android:textSize="16sp" />
+
+
+                    <TextView
+                        android:id="@+id/txtShortAmtLabel"
+                        android:layout_height="40dp"
+                        android:layout_width="wrap_content"
+                        android:layout_below="@+id/lblShortCerti"
+                        android:layout_toRightOf="@+id/txtShortWtlabel"
+                        android:layout_marginLeft="15dp"
+                        android:text="ShortAmt"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:padding="5dp"
+                        />
+
+                    <EditText
+                        android:id="@+id/txtShortAmt"
+                        android:layout_height="30dp"
+                        android:layout_width="90dp"
+                        android:layout_below="@+id/txtShortAmtLabel"
+                        android:layout_marginLeft="15dp"
+                        android:hint="0.0"
+                        android:layout_toRightOf="@+id/txtShortWt"
+                        android:layout_marginTop="5dp"
+                        android:textSize="20sp"
+                        android:padding="5dp"
+                        android:background="@drawable/spinner_border"/>
+
+
+
+                    <TextView
+                        android:id="@+id/txtCertiLabel"
+                        android:layout_height="40dp"
+                        android:layout_width="wrap_content"
+                        android:layout_below="@+id/lblShortCerti"
+                        android:layout_toRightOf="@+id/txtShortAmtLabel"
+                        android:layout_marginLeft="15dp"
+                        android:text="CertificateNo"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:padding="5dp"
+                        />
+
+                    <EditText
+                        android:id="@+id/txtCerti"
+                        android:layout_height="30dp"
+                        android:layout_width="90dp"
+                        android:layout_below="@+id/txtCertiLabel"
+                        android:layout_marginLeft="15dp"
+                        android:hint="0.0"
+                        android:layout_toRightOf="@+id/txtShortAmt"
+                        android:layout_marginTop="5dp"
+                        android:textSize="20sp"
+                        android:padding="5dp"
+                        android:background="@drawable/spinner_border"/>
+
+
+
+                </RelativeLayout>
+            </HorizontalScrollView>
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/horizontalScrollView2"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/roundcorner_button"
+                android:text="Back" />
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/horizontalScrollView2"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/btnBack"
+                android:background="@drawable/roundcorner_button"
+                android:text="Save" />
+        </RelativeLayout>
+
+    </ScrollView>
+</RelativeLayout>

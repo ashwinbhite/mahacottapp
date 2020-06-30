@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".EWayDetailsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtcalltype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PLEASE FILL ADDRESS DETAILS"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"
+                android:textSize="15sp"
+               />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card2"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ADDRESS DETAILS"
+                android:paddingLeft="5dp"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                />
+            <EditText
+                android:id="@+id/edt_address1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeActionLabel="org name"
+                android:ems="10"
+                android:hint="Address1"
+                android:layout_below="@+id/txt_address"
+                />
+
+
+            <EditText
+                android:id="@+id/edt_address2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="Address2"
+                android:layout_below="@+id/edt_address1"
+                />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:id="@+id/card4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card3"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtCustDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CITY"
+                android:textStyle="bold"
+                android:paddingLeft="5dp"
+                android:textSize="15sp"
+                />
+            <EditText
+                android:id="@+id/edt_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeActionLabel="org name"
+                android:ems="10"
+                android:hint="delivery city"
+                android:layout_below="@+id/txtCustDetails"
+                />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card4"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_state_det"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="STATE"
+                android:textStyle="bold"
+                android:paddingLeft="5dp"
+                android:textSize="15sp"
+                />
+            <AutoCompleteTextView
+                android:id="@+id/act_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeActionLabel="org name"
+                android:ems="10"
+                android:hint="choose state"
+                android:layout_below="@+id/txt_state_det"
+                />
+
+
+            <EditText
+                android:id="@+id/edt_pincode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="Enter pincode"
+                android:layout_below="@+id/act_state"
+                />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card5"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="APPROX DISTANCE FROM CENTER IN KM "
+                    android:textStyle="bold"
+                    android:paddingLeft="5dp"
+                    android:textSize="15sp"
+                    />
+
+                <EditText
+                    android:id="@+id/edt_approx_distance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:ems="10"
+                    android:hint="Enter distance in KM"
+                    android:inputType="number"
+                    />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="200dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/horizontalScrollView2"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/btnBack"
+        android:background="@drawable/roundcorner_button"
+        android:text="Save" />
+
+</LinearLayout>

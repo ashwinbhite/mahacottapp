@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.cotton.mahacott">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/mahacotlogo"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@drawable/mahacotlogo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:networkSecurityConfig">
+        <activity android:name=".EWayDetailsActivity"></activity>
+        <activity android:name=".SeedStockStatus" />
+        <activity android:name=".SeedStockEntryActivity" />
+        <activity android:name=".ProcurementNew" />
+        <activity android:name=".PasswordActivity" />
+        <activity android:name=".OtpActivity" />
+        <activity android:name=".OpeningBalance" />
+        <activity android:name=".IntimationLetterActivity" />
+        <activity android:name=".IntimationDetailsActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".FutureAuctionSubmision" />
+        <activity android:name=".DownloadDocActivity" />
+        <activity android:name=".DoVerificationActivity" />
+        <activity android:name=".DeliveryOrderDetailsActivity" />
+        <activity android:name=".DeliveryLoryActivity" />
+        <activity android:name=".Reports" />
+        <activity android:name=".AuctionReports" />
+        <activity android:name=".PendingDoReports" />
+        <activity android:name=".HomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+    </application>
+
+</manifest>

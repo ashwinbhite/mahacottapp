@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/icon_background"
+    tools:context=".DeliveryOrderDetailsActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delivery Order details"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="1dp"/>
+
+    <RelativeLayout
+        android:layout_below="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp" >
+
+        <ScrollView
+            android:id="@+id/scrollViewContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutInScroll"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <TextView
+                    android:id="@+id/txtDOnumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text="DO Number "
+                    android:layout_alignBaseline="@+id/edtTxtDOnumber"
+                    android:textSize="16sp" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/edtTxtDOnumber"
+                    android:layout_width="150dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/txtDOnumber"
+                    android:hint="DO Number"
+                    android:textSize="16sp"
+                    android:background="@drawable/spinner_border"
+                    android:inputType="number"
+                    android:padding="5dp"
+                    android:textColor="#000000" />
+
+
+                <TextView
+                    android:id="@+id/txtDODate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text="DO Date"
+
+                    android:textSize="16sp"
+                    android:layout_marginTop="35dp"
+                    android:layout_alignBaseline="@+id/btnDODate"/>
+
+
+                <Button
+                    android:id="@+id/btnDODate"
+                    android:layout_width="150dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="Do Date"
+                    android:layout_toRightOf="@+id/txtDODate"
+                    android:layout_alignLeft="@+id/edtTxtDOnumber"
+                    android:background="@drawable/spinner_border"
+                    android:layout_below="@+id/edtTxtDOnumber"
+                    android:textSize="16sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <!--  <TextView
+                     android:id="@+id/txtDODate"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:paddingLeft="5dp"
+                     android:text="DO Date"
+                     android:textSize="16sp"
+                     android:layout_marginTop="35dp"
+                     android:layout_alignBaseline="@+id/btnDODate"/>
+
+                 <Button
+                     android:id="@+id/btnDODate"
+                     android:layout_width="150dp"
+                     android:layout_height="30dp"
+                     android:layout_toRightOf="@+id/txtDODate"
+                     android:layout_alignLeft="@+id/edtTxtDOnumber"
+                     android:background="@drawable/spinner_border"
+                     android:textSize="16sp"
+                     android:textAppearance="?android:attr/textAppearanceMedium" />
+  -->
+
+
+                <TextView
+                    android:id="@+id/txtCommodity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignTop="@+id/selectCommodity"
+                    android:paddingLeft="5dp"
+                    android:text="Commodity"
+                    android:layout_alignBaseline="@+id/selectCommodity"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/selectCommodity"
+                    android:layout_width="150dp"
+                    android:layout_height="30dp"
+                    android:textSize="16sp"
+                    android:hint="Commodity"
+                    android:background="@drawable/spinner_border"
+                    android:padding="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignLeft="@+id/edtTxtDOnumber"
+                    android:layout_below="@+id/btnDODate" />
+
+
+                <TextView
+                    android:id="@+id/txtRegion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/edtRegion"
+                    android:paddingLeft="5dp"
+                    android:text="Region"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/edtRegion"
+                    android:layout_width="150dp"
+                    android:layout_height="30dp"
+                    android:layout_alignLeft="@+id/edtTxtDOnumber"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/selectCommodity"
+                    android:layout_toRightOf="@+id/txtRegion"
+                    android:background="@drawable/spinner_border"
+                    android:textSize="16sp"
+                    android:padding="5dp"
+                    android:editable="false"
+                    android:hint="Region" />
+
+                <TextView
+                    android:id="@+id/txtContractNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/lblContractNo"
+                    android:paddingLeft="5dp"
+                    android:text="Contract No."
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/lblContractNo"
+                    android:layout_width="150dp"
+                    android:layout_height="30dp"
+                    android:layout_alignLeft="@+id/edtTxtDOnumber"
+                    android:layout_below="@+id/edtRegion"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/txtContractNo"
+                    android:background="@drawable/spinner_border"
+                    android:padding="5dp"
+                    android:textSize="16sp"
+                    android:hint="Contract Number"/>
+
+                <Spinner
+                    android:id="@+id/selectSlot"
+                    android:layout_width="150dp"
+                    android:layout_height="30dp"
+                    android:layout_alignLeft="@+id/edtTxtDOnumber"
+                    android:layout_below="@+id/lblContractNo"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/txtSlotDet"
+                    android:background="@drawable/spinner_border"
+                    android:textSize="16sp" />
+
+                <!--    <AutoCompleteTextView
+                     android:id="@+id/selectSlot"
+                     android:layout_width="170dp"
+                     android:layout_height="50dp"
+                     android:background="@drawable/spinner_border"
+                     android:layout_below="@+id/lblContractNo"
+                     android:layout_marginLeft="20dp"
+                     android:layout_marginTop="20dp"
+                     android:layout_toRightOf="@+id/txtSlotDet" /> -->
+
+                <TextView
+                    android:id="@+id/txtSlotWiseDet"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/selectSlot"
+                    android:layout_alignLeft="@+id/edtTxtDOnumber"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16sp"
+                    android:padding="5dp"
+                    android:textColor="#0000FF"
+                    android:hint="Date : Qty : Price"/>
+
+                <TextView
+                    android:id="@+id/txtBuyer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:paddingLeft="5dp"
+                    android:layout_alignBaseline="@+id/edtBuyerCode"
+                    android:text="Buyer"
+                    android:textSize="16sp" />
+
+
+
+                <EditText
+                    android:id="@+id/edtBuyerCode"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/txtSlotWiseDet"
+                    android:layout_alignLeft="@+id/edtTxtDOnumber"
+                    android:layout_toRightOf="@+id/txtBuyer"
+                    android:background="@drawable/spinner_border"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16sp"
+                    android:padding="5dp"
+                    android:editable="false"
+                    android:hint="Code"/>
+
+                <EditText
+                    android:id="@+id/edtBuyerName"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_alignBaseline="@+id/edtBuyerCode"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/edtBuyerCode"
+                    android:background="@drawable/spinner_border"
+                    android:textSize="16sp"
+                    android:hint="Buyer Name"
+                    android:editable="false"
+                    android:padding="5dp" />
+
+                <RelativeLayout
+                    android:id="@+id/LL_DOquantity"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="60dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/spinner_border"
+                    android:layout_below="@+id/edtBuyerCode">
+
+                    <TextView
+                        android:id="@+id/txtDOQuantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:paddingLeft="5dp"
+                        android:layout_alignBaseline="@+id/edtDOQuantity"
+                        android:text="DO Quantity"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/edtDOQuantity"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:layout_toRightOf="@+id/txtDOQuantity"
+                        android:layout_marginTop="5dp"
+                        android:editable="false"
+                        android:inputType="numberDecimal"
+                        android:hint="0.00"/>
+
+                    <TextView
+                        android:id="@+id/txtDOBalance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:paddingLeft="5dp"
+                        android:layout_below="@+id/txtDOQuantity"
+                        android:layout_alignBaseline="@+id/edtDOBalance"
+                        android:text="DO Balance"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/edtDOBalance"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:layout_marginTop="20dp"
+                        android:editable="false"
+                        android:layout_alignLeft="@+id/edtDOQuantity"
+                        android:inputType="numberDecimal"
+                        android:layout_below="@+id/txtDOQuantity"
+                        android:layout_toRightOf="@+id/txtDOBalance"
+                        android:hint="0.00"/>
+
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btnNext"
+                    android:layout_height="30dp"
+                    android:layout_width="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:text="Next"
+                    android:background="@drawable/roundcorner_button"
+                    android:layout_below="@+id/LL_DOquantity"/>
+
+
+                <!-- <LinearLayout
+                    android:id="@+id/btnLL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtQuantity"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="20dp" >
+
+                    <Button
+                        android:id="@+id/btnClear"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="Clear"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btnBillDetails"
+                        android:layout_width="120dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="Bill Details"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </LinearLayout> -->
+
+                <TextView
+                    android:id="@+id/txtSlotDet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignTop="@+id/selectSlot"
+                    android:paddingLeft="5dp"
+                    android:text="Slot"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

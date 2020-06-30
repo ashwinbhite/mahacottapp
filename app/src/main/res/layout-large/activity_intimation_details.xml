@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/icon_background"
+    tools:context=".IntimationDetailsActivity">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Intimation Details"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="1dp"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/title" >
+
+        <ScrollView
+            android:id="@+id/scrollViewContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutInScroll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp" >
+
+                <TextView
+                    android:id="@+id/lblcommodity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="5dp"
+                    android:text="Commodity "
+
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txtViewCommodity"
+                    android:layout_width="170dp"
+                    android:layout_height="35dp"
+                    android:layout_alignBaseline="@+id/lblcommodity"
+                    android:layout_alignLeft="@+id/txtViewAvailableQty"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@+id/lblcommodity"
+                    android:background="@drawable/spinner_border"
+                    android:padding="10dp"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/lblAvailableQty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_below="@+id/lblcommodity"
+                    android:paddingLeft="5dp"
+                    android:text="Available Qty "
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txtViewAvailableQty"
+                    android:layout_width="170dp"
+                    android:layout_height="35dp"
+                    android:layout_alignBaseline="@+id/lblAvailableQty"
+                    android:layout_below="@+id/txtViewCommodity"
+                    android:layout_alignLeft="@+id/selectSaleType"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@+id/lblAvailableQty"
+                    android:background="@drawable/spinner_border"
+                    android:padding="10dp"
+
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/lblPendingQty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lblAvailableQty"
+
+                    android:paddingLeft="5dp"
+                    android:text="Pending Qty "
+
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txtViewPendingQty"
+                    android:layout_width="170dp"
+                    android:layout_height="35dp"
+                    android:layout_alignBaseline="@+id/lblPendingQty"
+                    android:layout_alignLeft="@+id/txtViewAvailableQty"
+                    android:layout_below="@+id/txtViewAvailableQty"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@+id/lblPendingQty"
+                    android:background="@drawable/spinner_border"
+                    android:padding="10dp"
+
+                    android:textColor="#000000" />
+
+
+                <HorizontalScrollView
+                    android:id="@+id/hsv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/txtViewPendingQty"
+                    android:layout_marginTop="15dp"
+                    android:fillViewport="true"
+                    android:minWidth="200dp"
+                    android:scrollbars="none" >
+
+                    <TableLayout
+                        android:id="@+id/tableStockReport"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:stretchColumns="*" >
+                    </TableLayout>
+                </HorizontalScrollView>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

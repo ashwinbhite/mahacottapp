@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/icon_background"
+    tools:context=".OpeningBalance">
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Opening Balance"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="1dp"/>
+
+
+    <RelativeLayout
+        android:layout_below="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp" >
+
+        <ScrollView
+            android:id="@+id/scrollViewContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutInScroll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp" >
+
+
+                <TextView
+                    android:id="@+id/txtstockEntryDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/inputDate"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="5dp"
+                    android:text="Opening Date"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/inputDate"
+                    android:layout_width="170dp"
+                    android:layout_height="35dp"
+                    android:layout_toRightOf="@+id/txtstockEntryDate"
+                    android:layout_alignLeft="@+id/edtAuctionedQty"
+                    android:layout_marginTop="10dp"
+
+                    android:background="@drawable/spinner_border"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+
+
+                <TextView
+                    android:id="@+id/lblcommodity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignBaseline="@+id/txtViewCommodity"
+                    android:paddingLeft="5dp"
+                    android:layout_below="@+id/inputDate"
+                    android:text="Commodity "
+                    android:textSize="16sp" />
+
+
+                <Spinner
+                    android:id="@+id/txtViewCommodity"
+                    android:layout_width="170dp"
+                    android:layout_height="50dp"
+                    android:layout_alignLeft="@+id/edtAuctionedQty"
+                    android:padding="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/lblcommodity"
+                    android:layout_below="@+id/inputDate"
+                    />
+
+
+
+
+
+                <TextView
+                    android:id="@+id/txtVariety"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/autoTxtVariety"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/txtViewCommodity"
+
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="Variety"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/autoTxtVariety"
+                    android:layout_width="170dp"
+                    android:layout_height="50dp"
+                    android:padding="5dp"
+                    android:layout_alignLeft="@+id/edtAuctionedQty"
+                    android:layout_below="@+id/txtViewCommodity"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/txtVariety"
+                    />
+
+                <TextView
+                    android:id="@+id/txtGrade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/auutoGrade"
+                    android:layout_below="@+id/autoTxtVariety"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="Grade"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/auutoGrade"
+                    android:layout_width="170dp"
+                    android:layout_height="50dp"
+                    android:padding="5dp"
+                    android:layout_alignLeft="@+id/edtAuctionedQty"
+                    android:layout_below="@+id/autoTxtVariety"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/txtGrade"
+
+                    />
+
+                <TextView
+                    android:id="@+id/txtactQty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/edtQuantity"
+                    android:paddingLeft="5dp"
+                    android:text="Tot Proc. Qty "
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/edtQuantity"
+                    android:layout_width="170dp"
+                    android:layout_height="35dp"
+                    android:layout_alignLeft="@+id/edtAuctionedQty"
+                    android:layout_below="@+id/auutoGrade"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/txtactQty"
+                    android:background="@drawable/spinner_border"
+                    android:hint="Proc. Qty in Qtl"
+                    android:inputType="number"
+                    android:padding="5dp" />
+
+                <TextView
+                    android:id="@+id/txtdeliverdQty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/edtDeliveredQty"
+                    android:paddingLeft="5dp"
+                    android:text="Tot Delivered Qty "
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/edtDeliveredQty"
+                    android:layout_width="170dp"
+                    android:layout_height="35dp"
+                    android:layout_alignLeft="@+id/edtAuctionedQty"
+                    android:layout_below="@+id/edtAuctionedQty"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/txtdeliverdQty"
+                    android:background="@drawable/spinner_border"
+                    android:hint="Deliverd Qty in Qtl"
+                    android:inputType="number"
+                    android:padding="5dp" />
+
+
+
+                <TextView
+                    android:id="@+id/txtSbndQty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/edtSbndQty"
+                    android:paddingLeft="5dp"
+                    android:text="Tot Sbnd Qty "
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/edtSbndQty"
+                    android:layout_width="170dp"
+                    android:layout_height="35dp"
+                    android:layout_alignLeft="@+id/edtAuctionedQty"
+                    android:layout_below="@+id/edtDeliveredQty"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/txtSbndQty"
+                    android:background="@drawable/spinner_border"
+                    android:hint="Sbnd Qty in Qtl"
+                    android:inputType="number"
+                    android:padding="5dp" />
+
+
+
+
+                <TextView
+                    android:id="@+id/txtReadyStock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/edtReadystock"
+                    android:paddingLeft="5dp"
+                    android:text="Tot Ready Stock"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/edtReadystock"
+                    android:layout_width="170dp"
+                    android:layout_height="35dp"
+                    android:layout_alignLeft="@+id/edtAuctionedQty"
+                    android:layout_below="@+id/edtFutureAuctionedQty"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/txtReadyStock"
+                    android:background="@drawable/spinner_border"
+                    android:hint="Ready Stock in Qtl"
+                    android:inputType="number"
+                    android:padding="5dp" />
+
+
+                <TextView
+                    android:id="@+id/txtAuctionedQty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/edtAuctionedQty"
+                    android:paddingLeft="5dp"
+                    android:text="Tot Auctioned Qty"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/edtAuctionedQty"
+                    android:layout_width="170dp"
+                    android:layout_height="35dp"
+                    android:layout_alignLeft="@+id/selectSaleType"
+                    android:layout_below="@+id/edtQuantity"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/txtAuctionedQty"
+                    android:background="@drawable/spinner_border"
+                    android:hint="Future+Ready Qty"
+                    android:inputType="number"
+                    android:padding="5dp" />
+
+                <TextView
+                    android:id="@+id/txtFutureAuctionedQty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/edtFutureAuctionedQty"
+                    android:paddingLeft="5dp"
+                    android:text="FutureAuctionQty"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/edtFutureAuctionedQty"
+                    android:layout_width="170dp"
+                    android:layout_height="35dp"
+                    android:layout_alignLeft="@+id/edtAuctionedQty"
+                    android:layout_below="@+id/edtSbndQty"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/txtFutureAuctionedQty"
+                    android:background="@drawable/spinner_border"
+                    android:hint="Qty in Qtl"
+                    android:inputType="number"
+                    android:padding="5dp" />
+                <TextView
+                    android:id="@+id/txtReadyAuction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ready Auction"
+                    android:layout_toRightOf="@+id/edtFutureAuctionedQty"
+                    android:layout_alignBaseline="@+id/edtFutureAuctionedQty"
+                    android:paddingLeft="5dp"
+
+
+
+                    />
+
+                <TextView
+                    android:id="@+id/txtFutureDeliveryQty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/edtFutureDeliveryQty"
+                    android:paddingLeft="5dp"
+                    android:text="FutureDeliveryQty"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/edtFutureDeliveryQty"
+                    android:layout_width="170dp"
+                    android:layout_height="35dp"
+                    android:layout_alignLeft="@+id/edtAuctionedQty"
+                    android:layout_below="@+id/edtReadystock"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/txtFutureDeliveryQty"
+                    android:background="@drawable/spinner_border"
+                    android:hint="Qty in Qtl"
+                    android:inputType="number"
+                    android:padding="5dp" />
+
+                <Button
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/edtFutureDeliveryQty"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/roundcorner_button"
+                    android:text="Save"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+                <HorizontalScrollView
+                    android:id="@+id/hsv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/btnSubmit"
+                    android:layout_marginTop="5dp"
+                    android:fillViewport="true"
+                    android:minWidth="200dp"
+                    android:scrollbars="none" >
+
+                    <TableLayout
+                        android:id="@+id/tableStockReport"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:stretchColumns="*" >
+                    </TableLayout>
+                </HorizontalScrollView>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>
